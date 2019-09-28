@@ -45,7 +45,7 @@
 						<br>
 						<input id='register_email' type='email' name='email_input' maxlength=255 placeholder='E-mail (optional)' class='text'>
 						<br>
-						<span id='span_terms'>By registering you agree with <a target='_blank' href='https://github.com/HonzaSTECH/Poznavacky/blob/master/TERMS_OF_SERVICE.md'>terms of use</a>.</span>
+						<span id='span_terms'>By registering you agree with the <a target='_blank' href='https://github.com/HonzaSTECH/Poznavacky/blob/master/TERMS_OF_SERVICE.md'>terms of use</a>.</span>
 						<br>
 						<button id='register_submit' onclick='register()' class='button' class='confirm button'>Create an account</button>
 					</div>

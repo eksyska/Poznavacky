@@ -79,7 +79,7 @@
     					</td>
     				</tr>
     			</table>
-    			<button onclick="reportImg(event)" id="reportButton" class="buttonDisabled" disabled>Nahlásit</button>
+    			<button onclick="reportImg(event)" id="reportButton" class="buttonDisabled" disabled>Report</button>
     			<select id="reportMenu" class="text">
 					<option>The picture does not load properly</option>
     				<option>The picture displays a different organism</option>
@@ -90,7 +90,7 @@
     			<button onclick="submitReport(event)" id="submitReport" class="button">Odeslat</button>
     			<button onclick="cancelReport(event)" id="cancelReport" class="button">Zrušit</button>
     		</fieldset>
-    		<a href="menu.php"><button class="button">Zpět</button></a>
+    		<a href="menu.php"><button class="button">Back</button></a>
     	</main>
         </div>
 	    <footer>

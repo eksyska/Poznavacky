@@ -34,7 +34,7 @@
     			<img id="image" class="img" src="imagePreview.png">
     			<div id="inputOutput">
     				<form onsubmit="answer(event)" id="answerForm">
-    					<input type=text class="text" id="textfield" autocomplete="off" placeholder="Zadejte odpověď">
+    					<input type=text class="text" id="textfield" autocomplete="off" placeholder="Your answer">
     					<input type=submit class="button" value="OK" />
     				</form>
     				<span id="correctAnswer">Correct!</span>
