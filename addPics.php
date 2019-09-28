@@ -22,17 +22,17 @@
 		<link rel="manifest" href="/manifest.json">
 		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ffc835">
 		<meta name="theme-color" content="#ffffff">
-		<title>Přidat obrázky</title>
+		<title>Adding pictures</title>
 	</head>
 	<body>
     <div class="container">
         <header>
-            <h1>Přidat obrázky</h1>
+            <h1>Adding pictures</h1>
         </header>
 		<main class="basic_main">
     		<form>
     			<fieldset id="field1">
-    				<div class="prikaz">Vyberte přírodninu, kterou chcete nahrát. V závorce je uvedeno množství obrázků dané přírodniny. Nahrávejte prosím především obrázky přírodnin s menším číslem.</div>
+    				<div class="prikaz">Choose an organism you want to upload. In the brackets there is a number of pictures of the organism. Please upload pictures of organisms with lower numbers first.</div>
     				<select onchange="selected1()" id="dropList" class="text">
     					<option value="" selected disabled hidden></option>
     					<?php 
@@ -53,7 +53,7 @@
     			</fieldset>
     			<fieldset id="field2">
     				<div id="duckLink_div"><a id="duckLink" target=_blank>  
-    					<div><span>Vyhledat na </span><img id="duckLogo" src="duckLogo.png"></div>       
+    					<div><span>Browse on </span><img id="duckLogo" src="duckLogo.png"></div>       
     				</a></div>       
     				<input type=url placeholder="Vložte URL obrázku" id="urlInput" class="text" onkeyup="urlTyped()"/>
     				<button id="urlConfirm" onclick="selected2(event)" class="buttonDisabled" disabled>OK</button>
@@ -64,18 +64,18 @@
     				<button id="resetButton" onclick="resetForm(event)" class="button">Reset</button>
     			</fieldset>
     		</form>
-    		<a href="menu.php"><button class="button">Zpět</button></a>
+    		<a href="menu.php"><button class="button">Back</button></a>
     	</main>
     </div>
 		<footer>
-			<div id="help" class="footerOption"><a target='_blank' href="https://github.com/HonzaSTECH/Poznavacky/wiki">Nápověda</a></div>
-			<div id="issues" class="footerOption" onclick="showLogin()"><a target='_blank' href="https://github.com/HonzaSTECH/Poznavacky/issues/new/choose">Nalezli jste problém?</a></div>
-			<div class="footerOption"><a target='_blank' href='https://github.com/HonzaSTECH/Poznavacky/blob/master/TERMS_OF_SERVICE.md'>Podmínky služby</a></div>
-			<div id="about" class="footerOption">&copy Štěchy a Eksyska, 2019</div>
+			<div id="help" class="footerOption"><a target='_blank' href="https://github.com/eksyska/Poznavacky/wiki/Help">Help</a></div>
+			<div id="issues" class="footerOption" onclick="showLogin()"><a target='_blank' href="https://github.com/HonzaSTECH/Poznavacky/issues/new/choose">Have you found a problem?</a></div>
+			<div class="footerOption"><a target='_blank' href='https://github.com/HonzaSTECH/Poznavacky/blob/master/TERMS_OF_SERVICE.md'>Terms of use</a></div>
+			<div id="about" class="footerOption">&copy Štěchy and Eksyska, 2019</div>
          	<script>
              	function showLogin()
              	{
-             		alert("Přihlašovací údaje pro nahlašování chyby:\nJméno: gjvj\nHeslo: poznavacky71");
+             		alert("Account login for bug reports:\nName: gjvj\nPassword: poznavacky71");
              	}
          	</script>
          </footer>

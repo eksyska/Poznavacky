@@ -22,12 +22,12 @@
 		<link rel="manifest" href="/manifest.json">
 		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ffc835">
 		<meta name="theme-color" content="#ffffff">
-		<title>Vyzkoušet se</title>
+		<title>Testing</title>
 	</head>
 	<body>
     <div class="container">
         <header>
-            <h1>Vyzkoušet se</h1>
+            <h1>Testing</h1>
         </header>
     	<main class="basic_main">
     		<fieldset>
@@ -37,40 +37,40 @@
     					<input type=text class="text" id="textfield" autocomplete="off" placeholder="Zadejte odpověď">
     					<input type=submit class="button" value="OK" />
     				</form>
-    				<span id="correctAnswer">Správně!</span>
+    				<span id="correctAnswer">Correct!</span>
     				<div id="wrongAnswer">
-    					<span id="wrong1">Špatně!</span><br>
-    					<span id="wrong2">Správná odpověď je </span>
+    					<span id="wrong1">Wrong!</span><br>
+    					<span id="wrong2">The correct answer is </span>
     					<span id="serverResponse"></span>
     			    </div>
-    			<button onclick="next()" class="button" id="nextButton">Další</button>
+    			<button onclick="next()" class="button" id="nextButton">Next</button>
     			</div>
-    			<button onclick="reportImg(event)" id="reportButton" class="button">Nahlásit</button>
+    			<button onclick="reportImg(event)" id="reportButton" class="button">Report</button>
     			<select id="reportMenu" class="text">
-    				<option>Obrázek se nezobrazuje správně</option>
-    				<option>Obrázek zobrazuje nesprávnou přírodninu</option>
-    				<option>Obrázek obsahuje název přírodniny</option>
-    				<option>Obrázek má příliš špatné rozlišení</option>
-    				<option>Obrázek porušuje autorská práva</option>
+    				<option>The picture doesn't load properly</option>
+    				<option>The picture displays a different organism</option>
+    				<option>The picture contains the name of the organism</option>
+    				<option>The picture has bad resolution</option>
+    				<option>The picture infringes copyright</option>
     			</select>
-    			<button onclick="submitReport(event)" id="submitReport" class="button">Odeslat</button>
-    			<button onclick="cancelReport(event)" id="cancelReport" class="button">Zrušit</button>
+    			<button onclick="submitReport(event)" id="submitReport" class="button">Send</button>
+    			<button onclick="cancelReport(event)" id="cancelReport" class="button">Cancel</button>
     		</fieldset>
-    		<a href="menu.php"><button class="button">Zpět</button></a>
+    		<a href="menu.php"><button class="button">Back</button></a>
 		</main>
     </div>
 		<footer>
-			<div id="help" class="footerOption"><a target='_blank' href="https://github.com/HonzaSTECH/Poznavacky/wiki">Nápověda</a></div>
-			<div id="issues" class="footerOption" onclick="showLogin()"><a target='_blank' href="https://github.com/HonzaSTECH/Poznavacky/issues/new/choose">Nalezli jste problém?</a></div>
-			<div class="footerOption"><a target='_blank' href='https://github.com/HonzaSTECH/Poznavacky/blob/master/TERMS_OF_SERVICE.md'>Podmínky služby</a></div>
-			<div id="about" class="footerOption">&copy Štěchy a Eksyska, 2019</div>
+			<div id="help" class="footerOption"><a target='_blank' href="https://github.com/HonzaSTECH/Poznavacky/wiki">Help</a></div>
+			<div id="issues" class="footerOption" onclick="showLogin()"><a target='_blank' href="https://github.com/HonzaSTECH/Poznavacky/issues/new/choose">Have you found a problem?</a></div>
+			<div class="footerOption"><a target='_blank' href='https://github.com/HonzaSTECH/Poznavacky/blob/master/TERMS_OF_SERVICE.md'>Terms of use</a></div>
+			<div id="about" class="footerOption">&copy Štěchy and Eksyska, 2019</div>
          	<script>
              	function showLogin()
              	{
-             		alert("Přihlašovací údaje pro nahlašování chyby:\nJméno: gjvj\nHeslo: poznavacky71");
+             		alert("Account login for bug reports:\nName: gjvj\nPassword: poznavacky71");
              	}
          	</script>
-         </footer>
+        </footer>
 	</body>
 	<script>
 		getRequest("getRandomPic.php", showPic);

@@ -42,32 +42,32 @@
         <header>  				
             <div id="menuHeading">
 				<?php echo $_SESSION['current'][1]; ?>
-				(<a href="list.php">Změnit</a>)
+				(<a href="list.php">Change</a>)
 			</div>
         </header>
         <main id="main_menu">
     	    <a href="addPics.php">
-	           <div id="btn1" class="menu" onclick="addPics()">Přidat obrázky</div>
+	           <div id="btn1" class="menu" onclick="addPics()">Adding pictures</div>
 	        </a>
 	           <a href="learn.php">
-	           <div id="btn2" class="menu" onclick="learn()">Učit se</div>
+	           <div id="btn2" class="menu" onclick="learn()">Learning</div>
             </a>
             <a href="test.php">
-	           <div id="btn3" class="menu" onclick="test()">Vyzkoušet se</div>
+	           <div id="btn3" class="menu" onclick="test()">Testing</div>
             </a>  
         </main>
     </div>
         <footer>
-			<div id="help" class="footerOption"><a target='_blank' href="https://github.com/HonzaSTECH/Poznavacky/wiki">Nápověda</a></div>
-			<div id="issues" class="footerOption" onclick="showLogin()"><a target='_blank' href="https://github.com/HonzaSTECH/Poznavacky/issues/new/choose">Nalezli jste problém?</a></div>
-			<div class="footerOption"><a target='_blank' href='https://github.com/HonzaSTECH/Poznavacky/blob/master/TERMS_OF_SERVICE.md'>Podmínky služby</a></div>
-			<div id="about" class="footerOption">&copy Štěchy a Eksyska, 2019</div>
+			<div id="help" class="footerOption"><a target='_blank' href="https://github.com/eksyska/Poznavacky/wiki/Help">Help</a></div>
+			<div id="issues" class="footerOption" onclick="showLogin()"><a target='_blank' href="https://github.com/HonzaSTECH/Poznavacky/issues/new/choose">Have you found a problem?</a></div>
+			<div class="footerOption"><a target='_blank' href='https://github.com/HonzaSTECH/Poznavacky/blob/master/TERMS_OF_SERVICE.md'>Terms of use</a></div>
+			<div id="about" class="footerOption">&copy Štěchy and Eksyska, 2019</div>
          	<script>
              	function showLogin()
              	{
-             		alert("Přihlašovací údaje pro nahlašování chyby:\nJméno: gjvj\nHeslo: poznavacky71");
+             		alert("Account login for bug reports:\nName: gjvj\nPassword: poznavacky71");
              	}
          	</script>
-         </footer>
+        </footer>
     </body>
 </html>

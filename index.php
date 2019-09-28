@@ -18,7 +18,7 @@
 		<link rel="manifest" href="/manifest.json">
 		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ffc835">
 		<meta name="theme-color" content="#ffffff">
-		<title>Ověření</title>
+		<title>Verification</title>
 	</head>
 	<body id="root">
 		<div class="container">
@@ -37,19 +37,19 @@
 				?>
 					<h2>Zaregistrujte se</h2>
 					<div class="udaje">
-						<input id='register_name' type='text' name='name_input' maxlength=15 placeholder='Jméno' required=true class='text'>
+						<input id='register_name' type='text' name='name_input' maxlength=15 placeholder='Username' required=true class='text'>
 						<br>
-						<input id='register_pass' type='password' name='pass_input' maxlength=31 placeholder='Heslo' required=true class='text'>
+						<input id='register_pass' type='password' name='pass_input' maxlength=31 placeholder='Password' required=true class='text'>
 						<br>    				    	
-						<input id='register_repass' type='password' name='repass_input' maxlength=31 placeholder='Heslo znovu' required=true class='text'>
+						<input id='register_repass' type='password' name='repass_input' maxlength=31 placeholder='Password' required=true class='text'>
 						<br>
-						<input id='register_email' type='email' name='email_input' maxlength=255 placeholder='E-mail (nepovinné)' class='text'>
+						<input id='register_email' type='email' name='email_input' maxlength=255 placeholder='E-mail (optional)' class='text'>
 						<br>
-						<span id='span_terms'>Registrací souhlasíte s <a target='_blank' href='https://github.com/HonzaSTECH/Poznavacky/blob/master/TERMS_OF_SERVICE.md'>podmínkami služby</a>.</span>
+						<span id='span_terms'>By registering you agree with <a target='_blank' href='https://github.com/HonzaSTECH/Poznavacky/blob/master/TERMS_OF_SERVICE.md'>terms of use</a>.</span>
 						<br>
-						<button id='register_submit' onclick='register()' class='button' class='confirm button'>Vytvořit účet</button>
+						<button id='register_submit' onclick='register()' class='button' class='confirm button'>Create an account</button>
 					</div>
-					<span class='toggleForms'>Již máte účet? <a href="javascript:showLogin()">Přihlašte se</a>.</span>
+					<span class='toggleForms'>Already registered? <a href="javascript:showLogin()">Log in</a>.</span>
 					<div id='registerErrors'>
 					</div>
 				</div>
@@ -69,40 +69,40 @@
 				?>
 					<h2>Přihlašte se</h2>
 					<div class="udaje">
-						<input id='login_name' type='text' name='name_input' maxlength=15 placeholder='Jméno' class='text'>
+						<input id='login_name' type='text' name='name_input' maxlength=15 placeholder='Username' class='text'>
 						<br>
-						<input id='login_pass' type='password' name='pass_input' maxlength=31 placeholder='Heslo' class='text'>
+						<input id='login_pass' type='password' name='pass_input' maxlength=31 placeholder='Password' class='text'>
 						<br>
 						<div class="checkbox">
 							<input type="checkbox" id="login_keep" name='stay_logged'/>
-							<label for="login_keep">Zůstat přihlášen</label>
+							<label for="login_keep">Stay logged in</label>
 						</div>
 						<br>
-						<button id='login_submit' onclick='login()' class='button' class='confirm button'>Přihlásit se</button>
+						<button id='login_submit' onclick='login()' class='button' class='confirm button'>Log in</button>
 					</div>
-					<span class='recoverPass'><a href="javascript:showPasswordRecovery()">Zapomněli jste heslo?</a></span>
+					<span class='recoverPass'><a href="javascript:showPasswordRecovery()">Have you forgotten your password?</a></span>
 					<br>
-					<span class='toggleForms'>Ještě nemáte účet? <a href="javascript:showRegister()">Zaregistrujte se</a>.</span>
+					<span class='toggleForms'>Don't have an account yet? <a href="javascript:showRegister()">Register</a>.</span>
 					<div id='loginErrors'>
 					</div>
 				</div>
 
 				<div id="obnoveniHesla" style="display: none;">
-					<span>Zadejte svojí e-mailovou adresu. Pokud existuje účet s takovou přidruženou adresou, pošleme na něj e-mail s instrukcemi k obnově hesla.</span>
+					<span>Enter your e-mail adress. If an account with this adress exists, we will send an e-mail with instructions for password recovery.</span>
 					<div>
 						<input class="text" id='passRecovery_input' type=text name="email" maxlength=255 required=true />
-						<button id='passRecovery_submit' onclick="recoverPassword()" class="button">Odeslat</button> 
+						<button id='passRecovery_submit' onclick="recoverPassword()" class="button">Send</button> 
 					</div>
-					<span>Nepamatujete si, jakou jste zadávali při registraci e-mailovou adresu, nebo jste žádnou nezadávali? Napište nám na <i style="font-style: italic;">poznavacky@email.com</i> a my vám pomůžeme obnovit heslo jinou metodou.</span>
+					<span>Don't you remember, which e-mail adress you entered when you were creating an account or you haven't entered any? Contact us at <i style="font-style: italic;">poznavacky@email.com</i> and we will help you with recovery.</span>
 					<br>
-					<button class="button"onclick="showLogin()">Zpět</button>
+					<button class="button"onclick="showLogin()">Back</button>
 					<div id='passwordRecoveryErrors'>
 					</div>
 				</div>
 			</main>
 		</div>
 		<footer id="cookiesAlert">
-			<div>Tyto stránky využívají ke své funkci soubory cookie. Používáním stránek souhlasíte s ukládáním souborů cookie na vašem zařízení.</div>
+			<div>This website is using cookies. By using the website you agree with saving cookie files on your device.</div>
 			<div id="cookiesAlertCloser" onclick="hideCookies()">x</div>
 		</footer>
 	</body>
