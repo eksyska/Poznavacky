@@ -35,7 +35,7 @@
 						echo "<div id='registrace' style='display:none'>";
 					}
 				?>
-					<h2>Zaregistrujte se</h2>
+					<h2>Register</h2>
 					<div class="udaje">
 						<input id='register_name' type='text' name='name_input' maxlength=15 placeholder='Username' required=true class='text'>
 						<br>
@@ -67,7 +67,7 @@
 						echo "<div id='prihlaseni' style='display:none'>";
 					}
 				?>
-					<h2>Přihlašte se</h2>
+					<h2>Log in</h2>
 					<div class="udaje">
 						<input id='login_name' type='text' name='name_input' maxlength=15 placeholder='Username' class='text'>
 						<br>
