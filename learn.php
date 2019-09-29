@@ -97,7 +97,7 @@
 			<div id="help" class="footerOption"><a target='_blank' href="https://github.com/eksyska/Poznavacky/wiki/Help">Help</a></div>
 			<div id="issues" class="footerOption" onclick="showLogin()"><a target='_blank' href="https://github.com/HonzaSTECH/Poznavacky/issues/new/choose">Have you found a problem?</a></div>
 			<div class="footerOption"><a target='_blank' href='https://github.com/HonzaSTECH/Poznavacky/blob/master/TERMS_OF_SERVICE.md'>Terms of use</a></div>
-			<div id="about" class="footerOption">&copy Štěchy and Eksyska, 2019</div>
+			<div id="about" class="footerOption">&copy Štěchy and Eksyska, 2019 - <a target='_blank' href="https://www.itnetwork.cz/">ITnetwork</a> summer competition 2019</div>
          	<script>
              	function showLogin()
              	{

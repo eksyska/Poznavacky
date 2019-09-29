@@ -1,4 +1,4 @@
-<?php
+ <?php
 	$redirectIn = false;
 	$redirectOut = true;
 	require 'verification.php';    //Obsahuje session_start();
@@ -7,12 +7,6 @@
 	//Mazání zvolené poznávačky ze sezení
 	unset($_SESSION['current']);
 	
-	$displayChangelog = false;
-	if (!(isset($_COOKIE['lastChangelog']) && $_COOKIE['lastChangelog'] == VERSION))
-    {
-		setcookie('lastChangelog',VERSION, time() + 60 * 60 * 24 * 365);
-		$displayChangelog = true;
-	}
 ?>
 <!DOCTYPE html>
 <html>
@@ -34,15 +28,17 @@
     <div class="container">
         <div id="changelogContainer">
         	<?php
-        	if ($displayChangelog === true)
+        	if (!(isset($_COOKIE['lastChangelog']) && $_COOKIE['lastChangelog'] == VERSION))
         	{
+        	    setcookie('lastChangelog',VERSION, time() + 60 * 60 * 24 * 365);
+				
         	    echo "<div id='changelogOverlay'></div>"; //Zatemnění zbytku stránky
 				
         	    echo "<div id='changelog'>"; //Okno se zprávou
 					echo "<div id='changelogText'>"; //Prvek se zprávou
 						include 'changelog.html'; //Zpráva
 					echo "</div>";
-					echo "<div style='text-align:center'><button id='closeChangelog' class='button' onclick='closeChangelog()'>Zavřít</button></div>"; //Zavírací tlačítko
+					echo "<div style='text-align:center'><button id='closeChangelog' class='button' onclick='closeChangelog()'>Close</button></div>"; //Zavírací tlačítko
         	    echo "</div>";
         	}
         	?>
@@ -83,7 +79,7 @@
 		<div id="help" class="footerOption"><a target='_blank' href="https://github.com/eksyska/Poznavacky/wiki/Help">Help</a></div>
 			<div id="issues" class="footerOption" onclick="showLogin()"><a target='_blank' href="https://github.com/HonzaSTECH/Poznavacky/issues/new/choose">Have you found a problem?</a></div>
 			<div class="footerOption"><a target='_blank' href='https://github.com/HonzaSTECH/Poznavacky/blob/master/TERMS_OF_SERVICE.md'>Terms of use</a></div>
-			<div id="about" class="footerOption">&copy Štěchy and Eksyska, 2019</div>
+			<div id="about" class="footerOption">&copy Štěchy and Eksyska, 2019 - <a target='_blank' href="https://www.itnetwork.cz/">ITnetwork</a> summer competition 2019</div>
          	<script>
              	function showLogin()
              	{
