@@ -47,19 +47,19 @@
                 switch ($reason)
                 {
                     case 0:
-                        echo "Obrázek se nezobrazuje správně";
+                        echo "The picture doesn't load properly";
                         break;
                     case 1:
-                        echo "Obrázek zobrazuje nesprávnou přírodninu";
+                        echo "The picture displays a different organism";
                         break;
                     case 2:
-                        echo "Obrázek obsahuje název přírodniny";
+                        echo "The picture contains the name of the organism";
                         break;
                     case 3:
-                        echo "Obrázek má příliš špatné rozlišení";
+                        echo "The picture has bad resolution";
                         break;
                     case 4:
-                        echo "Obrázek porušuje autorská práva";
+                        echo "The picture infringes copyright";
                         break;
                 }
                 echo "</td>";

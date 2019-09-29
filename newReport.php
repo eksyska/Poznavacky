@@ -21,7 +21,7 @@
 	
 	if ($reason !== "0" && $reason != 1 && $reason != 2 && $reason != 3 && $reason != 4)
 	{
-		die("swal('Neplatný důvod!','','error');");
+		die("swal('Invalid reason!','','error');");
 	}
 
 	//Získávání id obrázku
@@ -32,13 +32,13 @@
 	if (!$result)
 	{
 	    $err = mysqli_error($connection);
-	    die("swal('Vyskytla se neočekávaná chyba. Kontaktujte prosím správce a uveďte tuto chybu ve svém hlášení:','".mysqli_real_escape_string($connection, $err)."', 'error');");
+	    die("swal('An unexpected error has occured. Please contact an administrator and write this error in your report:','".mysqli_real_escape_string($connection, $err)."', 'error');");
 	}
 	$result = mysqli_fetch_array($result);
 	$picId = $result['id'];
 	if(empty($picId))
 	{
-	    die("swal('Neplatný obrázek','','error');");
+	    die("swal('Invalid picture','','error');");
 	}
 	
 	
@@ -62,9 +62,9 @@
 
 	mysqli_query($connection, $query);
 	filelog("Uživatel $username nahlásil obrázek s id $picId v poznávačce $pName z důvodu číslo $reason.");
-	if (!mysqli_error($connection)){echo "swal('Hlášení zaznamenáno','Obrázek bude co nejdříve zkontrolován. Do té doby bude nadále zobrazován. Nenahlašujte jej prosím vícekrát.','success');";}
+	if (!mysqli_error($connection)){echo "swal('Report saved','The picture will be checked as soon as possible. Until that it will still be displayed. Please don't report it again.','success');";}
 	else
 	{
 	    $err = mysqli_error($connection);
-	    echo "swal('Vyskytla se neočekávaná chyba. Kontaktujte prosím správce a uveďte tuto chybu ve svém hlášení:','".mysqli_real_escape_string($connection, $err)."URL: $url - Query: $query', 'error');";
+	    echo "swal('An unexpected error has occured. Please contact an administrator and write this error in your report:','".mysqli_real_escape_string($connection, $err)."URL: $url - Query: $query', 'error');";
 	}

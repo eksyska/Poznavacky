@@ -484,19 +484,19 @@ function deleteReport(event)
 	//Převedení důvodu do číselné podoby
 	switch (reason)
 	{
-	case "Obrázek se nezobrazuje správně":
+	case "The picture doesn't load properly":
 		reason = 0;
 		break;
-	case "Obrázek zobrazuje nesprávnou přírodninu":
+	case "The picture displays a different organism":
 		reason = 1;
 		break;
-	case "Obrázek obsahuje název přírodniny":
+	case "The picture contains the name of the organism":
 		reason = 2;
 		break;
-	case "Obrázek má příliš špatné rozlišení":
+	case "The picture has bad resolution":
 		reason = 3;
 		break;
-	case "Obrázek porušuje autorská práva":
+	case "The picture infringes copyright":
 		reason = 4;
 		break;
 	}

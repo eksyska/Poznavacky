@@ -15,8 +15,8 @@
 	$name = urldecode($_GET['name']);
 	$url = urldecode($_GET['url']);
 
-	if (empty($name)){die("swal('Neplatný název', '', 'error');");}
-	if (empty($url)){die("swal('Neplatná adresa', '', 'error');");}
+	if (empty($name)){die("swal('Invalid name', '', 'error');");}
+	if (empty($url)){die("swal('Invalid address', '', 'error');");}
 
 	$table = $_SESSION['current'][0];
 	$pName = $_SESSION['current'][1];
@@ -38,7 +38,7 @@
 	}
 	else
 	{
-		die("swal('Neplatný název', '', 'error');");
+		die("swal('Invalid name', '', 'error');");
 	}
 
 	//Kontrola, zda li daná adresa vede na obrázek
@@ -48,7 +48,7 @@
 	if (!(strpos($urlCopy, ".jpg@") || strpos($urlCopy, ".jpeg@") || strpos($urlCopy, ".png@") || strpos($urlCopy, ".gif@") || strpos($urlCopy, ".bmp@") || strpos($urlCopy, ".tiff@")))
 	{
 		filelog("Uživatel $username se pokusil nahrát obrázek v nesprávném formátu ($url) k přírodnině id $id v poznávačce $pName");
-		die("swal('Obrázek musí být ve formátu .jpg, .jpeg, .png, .gif, .bmp nebo .tiff.', '', 'error');");
+		die("swal('The picture has to be in .jpg, .jpeg, .png, .gif, .bmp or .tiff. format', '', 'error');");
 	}
 
 	//Kontrola duplicitního obrázku
@@ -58,7 +58,7 @@
 	if (mysqli_num_rows($result) > 0)
 	{
 		filelog("Uživatel $username se pokusil nahrát duplicitní obrázek k přírodnině id $id v poznávačce $pName");
-		die("swal('Tento obrázek je již přidán.', '', 'error');");
+		die("swal('This picture has already been added', '', 'error');");
 	}
 
 	//Vložit obrázek do databáze
@@ -68,7 +68,7 @@
 	{
 		$err = mysqli_error($connection);
 		filelog("Uživatel $username nemohl nahrát obrázek pro přírodninu $id v poznávačce $pName, protože se vyskytla neočekávaná chyba: $err.");
-		die("swal('Vyskytla se neočekávaná chyba. Kontaktujte prosím správce a uveďte tuto chybu ve svém hlášení:','".mysqli_real_escape_string($connection, $err)."', 'error');");
+		die("swal('An unexpected error has occured. Please contact an administrator and write this error in your report:','".mysqli_real_escape_string($connection, $err)."', 'error');");
 	}
     
 	//Zvýšit autorovy obrázku počet nahraných obrázků v databázi
@@ -80,7 +80,7 @@
 	{
 	    $err = mysqli_error($connection);
 	    filelog("Uživatel $username nemohl nahrát obrázek pro přírodninu $id v poznávačce $pName, protože se vyskytla neočekávaná chyba: $err.");
-	    die("swal('Vyskytla se neočekávaná chyba. Kontaktujte prosím správce a uveďte tuto chybu ve svém hlášení:','".mysqli_real_escape_string($connection, $err)."', 'error');");
+	    die("swal('An unexpected error has occured. Please contact an administrator and write this error in your report:','".mysqli_real_escape_string($connection, $err)."', 'error');");
 	}
 	
 	//Upravit počet obrázků dané přírodniny v tabulce seznam
@@ -95,7 +95,7 @@
 	{
 		$err = mysqli_error($connection);
 		filelog("Uživatel $username nemohl nahrát obrázek pro přírodninu $id v poznávačce $pName, protože se vyskytla neočekávaná chyba: $err.");
-		die("swal('Vyskytla se neočekávaná chyba. Kontaktujte prosím správce a uveďte tuto chybu ve svém hlášení:','".mysqli_real_escape_string($connection, $err)."', 'error');");
+		die("swal('An unexpected error has occured. Please contact an administrator and write this error in your report:','".mysqli_real_escape_string($connection, $err)."', 'error');");
 	}
 
 	//Upravit počet obrázků dané přírodniny v tabulce poznavacky
@@ -110,10 +110,10 @@
 	{
 		$err = mysqli_error($connection);
 		filelog("Uživatel $username nemohl nahrát obrázek pro přírodninu $id v poznávačce $pName, protože se vyskytla neočekávaná chyba: $err.");
-		die("swal('Vyskytla se neočekávaná chyba. Kontaktujte prosím správce a uveďte tuto chybu ve svém hlášení:','".mysqli_real_escape_string($connection, $err)."', 'error');");
+		die("swal('An unexpected error has occured. Please contact an administrator and write this error in your report:','".mysqli_real_escape_string($connection, $err)."', 'error');");
 	}
 	else
 	{
 		filelog("Uživatel $username nahrál nový obrázek k přírodnině id $id v poznávačce $pName");
-		die("swal('Obrázek úspěšně přidán', '', 'success');");
+		die("swal('The picture has been added successfuly', '', 'success');");
 	}

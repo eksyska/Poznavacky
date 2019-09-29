@@ -114,7 +114,7 @@ function getRequest(url, success = null, error = null){
 function responseFunc(response)
 {
 	eval(response);
-	if (response === "swal('Obrázek úspěšně přidán', '', 'success');")
+	if (response === "swal('The picture has been added successfuly', '', 'success');")
 	{
 		var options = document.getElementById("dropList").options;
 		for (var i = 0; i < options.length; i++)
