@@ -28,7 +28,7 @@
 		<link rel="manifest" href="/manifest.json">
 		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ffc835">
 		<meta name="theme-color" content="#ffffff">
-		<title>Poznávačky</title>
+		<title>Recognition tests</title>
 	</head>
 	<body>
     <div class="container">
@@ -48,18 +48,18 @@
         	?>
         </div>
         <header>
-			<h1>Dostupné poznávačky</h1>
+			<h1>Availible recognition tests</h1>
 			<nav>
-				<a href="accountSettings.php">Nastavení účtu</a>
-				<a href="logout.php">Odhlásit se</a>
+				<a href="accountSettings.php">Account settings</a>
+				<a href="logout.php">Log out</a>
 			</nav>
         </header>
         <main>
             <table id="listTable">
 		 	    <tr>
-    		 		<th>Název</th>
-    		 		<th>Přírodniny</th>
-    		 		<th>Obrázky</th>
+    		 		<th>Name</th>
+    		 		<th>Organisms</th>
+    		 		<th>Pictures</th>
     		 	</tr>
     		 	<?php
     				//Seznam dostupných poznávaček
@@ -80,14 +80,14 @@
         </main>
     </div>
         <footer>
-			<div id="help" class="footerOption"><a target='_blank' href="https://github.com/HonzaSTECH/Poznavacky/wiki">Nápověda</a></div>
-			<div id="issues" class="footerOption" onclick="showLogin()"><a target='_blank' href="https://github.com/HonzaSTECH/Poznavacky/issues/new/choose">Nalezli jste problém?</a></div>
-			<div class="footerOption"><a target='_blank' href='https://github.com/HonzaSTECH/Poznavacky/blob/master/TERMS_OF_SERVICE.md'>Podmínky služby</a></div>
-			<div id="about" class="footerOption">&copy Štěchy a Eksyska, 2019</div>
+		<div id="help" class="footerOption"><a target='_blank' href="https://github.com/eksyska/Poznavacky/wiki/Help">Help</a></div>
+			<div id="issues" class="footerOption" onclick="showLogin()"><a target='_blank' href="https://github.com/HonzaSTECH/Poznavacky/issues/new/choose">Have you found a problem?</a></div>
+			<div class="footerOption"><a target='_blank' href='https://github.com/HonzaSTECH/Poznavacky/blob/master/TERMS_OF_SERVICE.md'>Terms of use</a></div>
+			<div id="about" class="footerOption">&copy Štěchy and Eksyska, 2019</div>
          	<script>
              	function showLogin()
              	{
-             		alert("Přihlašovací údaje pro nahlašování chyby:\nJméno: gjvj\nHeslo: poznavacky71");
+             		alert("Account login for bug reports:\nName: gjvj\nPassword: poznavacky71");
              	}
          	</script>
          </footer>
