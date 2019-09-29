@@ -12,7 +12,7 @@
     {
         $ip = $_SERVER['REMOTE_ADDR'];
         fileLog("Uživatel se pokusil přihlásit s příliš dlouhým jménem z IP adresy $ip");
-        echo "<span>Jméno nesmí být více než 15 znaků dlouhé.</span>";
+        echo "<span>Your name mustn't be longer than 15 characters.</span>";
         die();
     }
     
@@ -22,7 +22,7 @@
         $ip = $_SERVER['REMOTE_ADDR'];
         fileLog("Uživatel se pokusil přihlásit s příliš dlouhým heslem z IP adresy $ip");
         
-        echo "<span>Heslo nesmí být více než 31 znaků dlouhé.</span>";
+        echo "<span>Your password mustn't be longer than 31 characters.</span>";
         die();
     }
     
@@ -38,7 +38,7 @@
         $ip = $_SERVER['REMOTE_ADDR'];
         fileLog("Uživatel se pokusil přihlásit k neexistujícímu účtu ($name) z IP adresy $ip");
         
-        echo "<span>Uživatel s tímto jménem neexistuje.</span>";
+        echo "<span>No user with this name exists.</span>";
         die();
     }
     
@@ -88,7 +88,7 @@
         $result = mysqli_query($connection, $query);
         
         $ip = $_SERVER['REMOTE_ADDR'];
-        $username = $_SESSION['user']['name'];
+        $username = $result['jmeno'];
         fileLog("Uživatel $username se přihlásil z IP adresy $ip");
         
         echo "location.href = 'list.php';";  //Přesměrování do systému
@@ -98,5 +98,5 @@
     $ip = $_SERVER['REMOTE_ADDR'];
     fileLog("Uživatel $name se pokusil přihlásit se špatným heslem z IP adresy $ip");
     
-    echo "<span>Špatné heslo</span>";
+    echo "<span>Wrong password</span>";
     

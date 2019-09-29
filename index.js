@@ -81,7 +81,7 @@ function register()
 	var email = document.getElementById("register_email").value;
 	if (email.length == 0)
 	{
-		if (!confirm("Opravdu se chcete zaregistrovat bez zadání e-mailové adresy? Nebudete tak moci dostávat důležitá upozornění nebo obnovit zapomenuté heslo. E-mailovou adresu můžete kdykoliv změnit nebo odebrat.")){return;}
+		if (!confirm("Do you really want to register without an e-mail address? You won't be able to recieve important notifications or recover a forgotten password. You can change or remove your e-mail address anytime.")){return;}
 	}
 	
 	username = encodeURIComponent(username);

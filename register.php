@@ -12,16 +12,16 @@
     $errors = array();
     
     //Kontrola minimální délky jména
-    if (mb_strlen($name) < 4){array_push($errors, "Jméno musí být alespoň 4 znaky dlouhé.");}
+    if (mb_strlen($name) < 4){array_push($errors, "Your username has to be at least 4 characters long.");}
     
     //Kontrola maximální délky jména
-    if (mb_strlen($name) > 15){array_push($errors, "Jméno nesmí být více než 15 znaků dlouhé.");}
+    if (mb_strlen($name) > 15){array_push($errors, "Your username mustn't be longer than 15 characters.");}
     
     //Kontrola minimální délky hesla
-    if (mb_strlen($pass) < 6){array_push($errors, "Heslo musí být alespoň 6 znaků dlouhé.");}
+    if (mb_strlen($pass) < 6){array_push($errors, "Your password has to be at least 6 characters long.");}
     
     //Kontrola maximální délky hesla
-    if (mb_strlen($pass) > 31){array_push($errors, "Heslo nesmí být více než 31 znaků dlouhé.");}
+    if (mb_strlen($pass) > 31){array_push($errors, "Your password mustn't be longer than 31 characters.");}
     
     //Ochrana proti SQL injekci (e-mail je zvlášť)
     $name = mysqli_real_escape_string($connection, $name);
@@ -39,7 +39,7 @@
         echo "location.href = 'errSql.html'";
         die();
     }
-    if (mysqli_num_rows($result) > 0){array_push($errors, "Jméno je již používáno jiným uživatelem.");}
+    if (mysqli_num_rows($result) > 0){array_push($errors, "This username has already been taken.");}
     
     //JMÉNO JE OK
     
@@ -47,20 +47,20 @@
     if(strlen($pass) !== strspn($pass, '0123456789aábcčdďeěéfghiíjklmnňoópqrřsštťuůúvwxyýzžAÁBCČDĎEĚÉFGHIÍJKLMNŇOÓPQRŘSŠTŤUŮÚVWXYZŽ {}()[]#:;^,.?!|_`~@$%/+-*=\"\'')){array_push($errors, "Vaše heslo obsahuje nepovolený znak.");}
     
     //Kontrola shodnosti hesel
-    if ($pass !== $repass){array_push($errors, "Hesla se neshodují.");}
+    if ($pass !== $repass){array_push($errors, "The passwords don't match.");}
     
     //HESLO JE OK
     
     if (!empty($email)) //E-mail je nepovinná položka
     {
         //Kontrola délky e-mailu
-        if(mb_strlen($email) > 255){array_push($errors, "Email nesmí být delší než 255 znaků.");}
+        if(mb_strlen($email) > 255){array_push($errors, "E-mail address mustn't be longer than 255 characters.");}
         
         //Ochrana proti SQL injekci
         $email = mysqli_real_escape_string($connection, $email);
         
         //Kontrola platného e-mailu
-        if(!filter_var($email, FILTER_VALIDATE_EMAIL)){array_push($errors, "E-mail nemá platný formát.");}
+        if(!filter_var($email, FILTER_VALIDATE_EMAIL)){array_push($errors, "The e-mail address doesn't have a valid format.");}
         
         //Kontrola volnosti e-mailu
         $query = "SELECT id FROM uzivatele WHERE email = '$email'";
@@ -70,7 +70,7 @@
             echo "location.href = 'errSql.html'";
             die();
         }
-        if (mysqli_num_rows($result) > 0){array_push($errors, "E-mail je již používán jiným uživatelem.");}
+        if (mysqli_num_rows($result) > 0){array_push($errors, "This e-mail address has already been taken.");}
     }
     
     //E-MAIL JE OK, NEBO NENÍ VYPLNĚN
