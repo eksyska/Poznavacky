@@ -26,30 +26,30 @@
         if ($type === 0)
         {
             $email .= "
-                <p>Pro obnovení vašeho hesla klikněte na tento odkaz: <a href='localhost/Poznavacky/emailPasswordRecovery.php?token=".$data['code']."'>OBNOVIT HESLO</a></p>
-                <p>Tento odkaz bude platný po následujících 24 hodin, nebo do odeslání žádosti o nový kód.</p>
-                <p style='color: #990000;'><span style='font-weight: bold;'>DŮLEŽITÉ: </span><span>Tento e-mail nikomu nepřeposílejte! Mohl by získat přístup k vašemu účtu.</span>
+                <p>For password recovery click on this link: <a href='localhost/Poznavacky/emailPasswordRecovery.php?token=".$data['code']."'>RECOVER PASSWORD</a></p>
+                <p>The link will be availible for the upcoming 24 hours or until a new request is sent.</p>
+                <p style='color: #990000;'><span style='font-weight: bold;'>IMPORTANT: </span><span>Don't forward this message to anyone! They could get access to your account.</span>
             ";
         }
         if ($type === 1)
         {
             $email .= "
-                <p>Na základě vaší žádosti na <a href='poznavacky.chytrak.cz'>poznavacky.chytrak.cz</a> bylo změněno vaše uživatelské jméno na <b>".$data['newName']."</b>.
-                <br>Pod svým starým jménem (<b>".$data['oldName']."</b>) se od nynějška již nebudete moci přihlásit.</p>
-                <p>Pokud si přejete změnit jméno zpět na staré nebo nějaké úplně jiné, můžete tak učinit odesláním další žádosti o změnu jména v nastavení vašeho uživatelského účtu.</p>
-                <p>Neodesílali jste žádnou žádost na změnu uživatelského jména? Je možné, že někdo získal přístup k vašemu účtu. Doporučujeme vám si co nejdříve změnit vaše heslo. Pokud se nemůžete přihlásit, kontaktujte nás prosím na e-mailové adrese <a href='mailto:poznavacky@email.com'>poznavacky@email.com</a>".
+                <p>Based on your request at <a href='poznavacky.jednoduse.cz'>poznavacky.jednoduse.cz</a> your username was changed to <b>".$data['newName']."</b>.
+                <br>Under your old name (<b>".$data['oldName']."</b>) you can't no longer log in.</p>
+                <p>If you want to change the name back to the old one or to a completely different one, you can do so by sending another request at your account settings.</p>
+                <p>Haven't you send any username change request? It is possible that someone has got an access to your account. We recommend you to change your password as soon as possible. If you can't log in, please contact us at <a href='mailto:poznavacky@email.com'>poznavacky@email.com</a>".
                 "</p>
             ";
         }
         if ($type === 2)
         {
             $email .= "
-            <p>Vaše žádost o změnu uživatelského jména na <a href='poznavacky.chytrak.cz'>poznavacky.chytrak.cz</a> byla administrátorem zamítnuta.
-            <br><b>Důvod zamítnutí: <span style='color:#990000'>".$data['reason']."</span>.</b><br>
-            Vaše současné jméno (<b>".$data['oldName']."</b>) tak stále zůstává platným přihlašovacím údajem.</p>
-            <p>Pokud si jméno stále chcete změnit, můžete odeslat novou žádost o změnu. Neodesílejte však prosím žádost o změnu na jméno, které bylo zamítnuto.</p>
-            <p>Neodesílali jste žádnou žádost na změnu uživatelského jména? Je možné, že někdo získal přístup k vašemu účtu. Doporučujeme vám si co nejdříve změnit vaše heslo. Pokud se nemůžete přihlásit, kontaktujte nás prosím na e-mailové adrese <a href='mailto:poznavacky@email.com'>poznavacky@email.com</a>.</p>
-            ";
+                <p>Your request for username change at <a href='poznavacky.jednoduse.cz'>poznavacky.jednoduse.cz</a> was denied by an administrator.
+                <br><b>Reason for denial: <span style='color:#990000'>".$data['reason']."</span>.</b><br>
+                <p> Your currnet name (<b>".$data['oldName']."</b>) is still valid.</p>
+                <p>If you still want to change your username, you can send another request. Hovewer, don't send a request for the name that has been denied.</p>
+                <p>Haven't you send any username change request? It is possible that someone has got an access to your account. We recommend you to change your password as soon as possible. If you can't log in, please contact us at <a href='mailto:poznavacky@email.com'>poznavacky@email.com</a></p>"
+                ;
         }
         
         //Patička
@@ -70,10 +70,10 @@
         //Zápatí
         if ($type === 0)
         {
-            $email .= "<p>Pokud jste o obnovu hesla nezažádali, můžete tento e-mail ignorovat.</p>";
-            $email .= "<p>V případě problémů nás kontaktujte na <a href='mailto:poznavacky@email.com'>poznavacky@email.com</a></p>";
+            $email .= "<p>If you haven't requested a password change, you can ignore this e-mail.</p>";
+            $email .= "<p>In case of problems, contact us at<a href='mailto:poznavacky@email.com'>poznavacky@email.com</a></p>";
         }
-        $email .= "<p>Toto je automaticky vygenerovaná zpráva. Prosíme, neodpovídejte na ni.</p>";
+        $email .= "<p>This is an automatically generated message. Please, don't reply.</p>";
         
         //Zbytek patičky
         $email .= "

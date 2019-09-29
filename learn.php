@@ -22,17 +22,17 @@
 		<link rel="manifest" href="/manifest.json">
 		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ffc835">
 		<meta name="theme-color" content="#ffffff">
-		<title>Učit se</title>
+		<title>Learning</title>
 	</head>
 	<body onkeypress="keyPressed(event)">
         <div class="container">
         <header>
-            <h1>Učit se</h1>
+            <h1>Learning</h1>
         </header>
     	<main class="basic_main">
     		<fieldset>
-    			<div class="prikaz">Vyberte si přírodninu, jejíž obrázky si chcete prohlížet. Na další nebo předchozí přírodninu můžete přejít rychle pomocí tlačítek.</div>
-    		  <select onchange="sel()" id="dropList" class="text">
+    			<div class="prikaz">Choose an organism you want to view. You can switch to following or previous picture using buttons.</div>
+    		  	<select onchange="sel()" id="dropList" class="text">
     				<option value="" selected disabled hidden></option>
     				<?php 
     					//Vypisování přírodnin
@@ -51,11 +51,11 @@
     			</select>
     			<br>
     			<button onclick="prev(event)" class="button">
-				Předchozí přírodnina
+				Previous organism
 				<span class="key_short">[S]</span>
 			</button>
     			<button onclick="next(event)" class="button">
-				Následující přírodnina
+				Following organism
 				<span class="key_short">[W]</span>
 			</button>
     		</fieldset>
@@ -79,29 +79,29 @@
     					</td>
     				</tr>
     			</table>
-    			<button onclick="reportImg(event)" id="reportButton" class="buttonDisabled" disabled>Nahlásit</button>
+    			<button onclick="reportImg(event)" id="reportButton" class="buttonDisabled" disabled>Report</button>
     			<select id="reportMenu" class="text">
-    				<option>Obrázek se nezobrazuje správně</option>
-    				<option>Obrázek zobrazuje nesprávnou přírodninu</option>
-    				<option>Obrázek obsahuje název přírodniny</option>
-    				<option>Obrázek má příliš špatné rozlišení</option>
-    				<option>Obrázek porušuje autorská práva</option>
+					<option>The picture does not load properly</option>
+    				<option>The picture displays a different organism</option>
+    				<option>The picture contains the name of the organism</option>
+    				<option>The picture has bad resolution</option>
+    				<option>The picture infringes copyright</option>
     			</select>
     			<button onclick="submitReport(event)" id="submitReport" class="button">Odeslat</button>
     			<button onclick="cancelReport(event)" id="cancelReport" class="button">Zrušit</button>
     		</fieldset>
-    		<a href="menu.php"><button class="button">Zpět</button></a>
+    		<a href="menu.php"><button class="button">Back</button></a>
     	</main>
         </div>
 	    <footer>
-			<div id="help" class="footerOption"><a target='_blank' href="https://github.com/HonzaSTECH/Poznavacky/wiki">Nápověda</a></div>
-			<div id="issues" class="footerOption" onclick="showLogin()"><a target='_blank' href="https://github.com/HonzaSTECH/Poznavacky/issues/new/choose">Nalezli jste problém?</a></div>
-			<div class="footerOption"><a target='_blank' href='https://github.com/HonzaSTECH/Poznavacky/blob/master/TERMS_OF_SERVICE.md'>Podmínky služby</a></div>
-			<div id="about" class="footerOption">&copy Štěchy a Eksyska, 2019</div>
+			<div id="help" class="footerOption"><a target='_blank' href="https://github.com/eksyska/Poznavacky/wiki/Help">Help</a></div>
+			<div id="issues" class="footerOption" onclick="showLogin()"><a target='_blank' href="https://github.com/HonzaSTECH/Poznavacky/issues/new/choose">Have you found a problem?</a></div>
+			<div class="footerOption"><a target='_blank' href='https://github.com/HonzaSTECH/Poznavacky/blob/master/TERMS_OF_SERVICE.md'>Terms of use</a></div>
+			<div id="about" class="footerOption">&copy Štěchy and Eksyska, 2019</div>
          	<script>
              	function showLogin()
              	{
-             		alert("Přihlašovací údaje pro nahlašování chyby:\nJméno: gjvj\nHeslo: poznavacky71");
+             		alert("Account login for bug reports:\nName: gjvj\nPassword: poznavacky71");
              	}
          	</script>
          </footer>
