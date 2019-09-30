@@ -47,7 +47,7 @@
                 switch ($reason)
                 {
                     case 0:
-                        echo "The picture doesn't load properly";
+                        echo "The picture doesn\'t load properly";
                         break;
                     case 1:
                         echo "The picture displays a different organism";
