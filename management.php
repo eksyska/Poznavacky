@@ -1,4 +1,8 @@
 <?php    
+/*
+	TENTO ZDROJOVÝ SOUBOR NENÍ A NEBUDE PŘELOŽEN DO ANGLIČTINY, PROTOŽE SE NEBUDE ZOBRAZOVAT BĚŽNÝM UŽIVATELŮM, ALE POUZE SPRÁVCŮM
+	THIS SOURCE FILE ISN'T AND WON'T BE TRANSLATED INTO ENGLISH, BECAUSE IT WON'T DISPLAY TO NORMAL USERS, BUT ONLY TO ADMINISTRATORS
+*/
     $redirectIn = false;
     $redirectOut = true;
     require 'verification.php';    //Obsahuje session_start();
