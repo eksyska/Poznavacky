@@ -62,7 +62,7 @@
 
 	mysqli_query($connection, $query);
 	filelog("Uživatel $username nahlásil obrázek s id $picId v poznávačce $pName z důvodu číslo $reason.");
-	if (!mysqli_error($connection)){echo "swal('Report saved','The picture will be checked as soon as possible. Until that it will still be displayed. Please don't report it again.','success');";}
+	if (!mysqli_error($connection)){echo "swal('Report saved','The picture will be checked as soon as possible. Until that it will still be displayed. Please don\'t report it again.','success');";}
 	else
 	{
 	    $err = mysqli_error($connection);

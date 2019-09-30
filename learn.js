@@ -114,7 +114,7 @@ function submitReport(event)
 	//Převedení důvodu na číslo
 	switch (reason)
 	{
-	case "The picture doesn't load properly":
+	case "The picture doesn\'t load properly":
 		reason = 0;
 		break;
 	case "The picture displays a different organism":
@@ -130,7 +130,7 @@ function submitReport(event)
 		reason = 4;
 		break;
 	default:
-		swal("Neplatný důvod!","","error");
+		swal("Incorrect reason!","","error");
 		return;
 	}
 	
@@ -139,7 +139,7 @@ function submitReport(event)
 	{
 	case "noImage.png":
 	case "imagePreview":
-		swal("Neplatný obrázek!","","error");
+		swal("Incorrect picture!","","error");
 		return;
 	}
 	
