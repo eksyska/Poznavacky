@@ -132,7 +132,7 @@ function submitReport(event)
 	//Převedení důvodu na číslo
 	switch (reason)
 	{
-	case "The picture doesn't load properly":
+	case "The picture doesn\'t load properly":
 		reason = 0;
 		break;
 	case "The picture displays a different organism":
