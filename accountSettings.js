@@ -43,7 +43,7 @@ function changePasswordStage2(response)
 	}
 	else
 	{
-		swal("Špatné heslo.","","error");
+		swal("Incorrect password.","","error");
 		document.getElementById("changePasswordInputFieldOld").value = "";
 	}
 }
@@ -100,7 +100,7 @@ function changeEmailStage2(response)
 	}
 	else
 	{
-		swal("Špatné heslo.","","error");
+		swal("Incorrect password.","","error");
 		document.getElementById("changeEmailPasswordInputField").value = "";
 	}
 }
@@ -111,7 +111,7 @@ function confirmEmailChange()
 	
 	if (newEmail.length == 0)
 	{
-		if (!confirm("Opravdu chcete ze svého účtu odebrat e-mailovou adresu? Nebudete tak moci dostávat důležitá upozornění nebo obnovit zapomenuté heslo.")){return;}
+		if (!confirm("Do you really want to remove your e-mail address? You won't be able to recieve important notifications or recover a forgotten password.")){return;}
 		/*
 		swal({
 			title: "Odebrat e-mail",
@@ -181,7 +181,7 @@ function deleteAccountConfirm(response)
 	}
 	else
 	{
-		swal("Špatné heslo.","","error");
+		swal("Incorrect password.","","error");
 		document.getElementById("deleteAccountInputField").value = "";
 	}
 }
