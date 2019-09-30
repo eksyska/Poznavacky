@@ -81,7 +81,7 @@
     			</table>
     			<button onclick="reportImg(event)" id="reportButton" class="buttonDisabled" disabled>Report</button>
     			<select id="reportMenu" class="text">
-					<option>The picture does not load properly</option>
+					<option>The picture doesn't load properly</option>
     				<option>The picture displays a different organism</option>
     				<option>The picture contains the name of the organism</option>
     				<option>The picture has bad resolution</option>
